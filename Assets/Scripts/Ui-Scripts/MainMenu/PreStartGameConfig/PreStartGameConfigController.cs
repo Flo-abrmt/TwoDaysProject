@@ -20,7 +20,7 @@ public class PreStartGameConfigController : MonoBehaviour
     public void StartGame()
     {
         // Replace "GameScene" with the name of your actual game scene
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("GameScene-City");
     }
 }
 

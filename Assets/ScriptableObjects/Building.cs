@@ -3,19 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="New building",menuName ="building")]
+[CreateAssetMenu(fileName ="New building",menuName ="Building")]
 public class Building : ScriptableObject {
 
     [SerializeField] string description;
-    [SerializeField] string version;
-    [SerializeField] string ressourceName1;
-    [SerializeField] int ressourceCost1;
-    [SerializeField] string ressourceName2;
-    [SerializeField] int ressourceCost2;
+    [SerializeField] string costWorkForce;
+    [SerializeField] int? costsWorkForce;
+    [SerializeField] string costFood;
+    [SerializeField] int? costsFood;
+    [SerializeField] string costGold;
+    [SerializeField] int? costsGold;
     [SerializeField] string buildName;
-    [SerializeField] int importance;
+    [SerializeField] int? importance;
+    [SerializeField] string produceWorkForce;
+    [SerializeField] int? produceAmountWorkForce;
+    [SerializeField] string produceFood;
+    [SerializeField] int? produceAmountFood;
+    [SerializeField] string produceGold;
+    [SerializeField] int? produceAmountGold;
 
-    [SerializeField] Array additionalInformations;
+    [SerializeField] List<string> additionalInformations;
 
     [SerializeField] Sprite UISprite;
     [SerializeField] Sprite GameSprite;
