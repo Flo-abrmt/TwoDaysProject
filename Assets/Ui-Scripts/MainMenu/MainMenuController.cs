@@ -6,27 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    public GameObject optionsMenu; // Assign in inspector
-    public GameObject configWindow; // Assign in inspector
+    public GameObject OptionsMenu; // Assign in inspector
+    public GameObject PreStartGameConfig; // Assign in inspector
 
     public void StartGame()
     {
-        configWindow.SetActive(true);
+        PreStartGameConfig.SetActive(true);
     }
 
     public void OpenOptions()
     {
-        optionsMenu.SetActive(true);
+        OptionsMenu.SetActive(true);
     }
 
     public void CloseOptions()
     {
-        optionsMenu.SetActive(false);
+        OptionsMenu.SetActive(false);
     }
 
     public void CloseConfig()
     {
-        configWindow.SetActive(false);
+        PreStartGameConfig.SetActive(false);
     }
 
     public void ExitGame()
