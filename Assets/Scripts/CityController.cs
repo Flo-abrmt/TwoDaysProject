@@ -12,9 +12,9 @@ public class CityController : MonoBehaviour
 
     }
 
-    void whenCycle()
+    public void whenCycle()
     {
-
+        Debug.Log("123");
     }
 
     void checkForRessources()

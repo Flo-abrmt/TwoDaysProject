@@ -4,16 +4,12 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    CycleController cycleController;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        cycleController = GetComponent<CycleController>();
+        startCityCycle();
     }
 
     //load data of Player and Game
@@ -21,4 +17,10 @@ public class GameController : MonoBehaviour
     {
 
     } 
+    //diverse the day in different phases
+    //after each day the cycle will restart
+    void startCityCycle()
+    {
+        cycleController.handleCycle();
+    }
 }
