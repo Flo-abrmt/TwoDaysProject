@@ -3338,9 +3338,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
+  minTime: 0
   morningSprite: {fileID: 21300000, guid: 338e782a8afaec84cb28bc37f2365203, type: 3}
-  highnoonSprite: {fileID: 21300000, guid: 9754c96e0e6a2c1458b24276ead38b47, type: 3}
+  middaySprite: {fileID: 21300000, guid: 9754c96e0e6a2c1458b24276ead38b47, type: 3}
   eveningSprite: {fileID: 21300000, guid: 62f8fdea223972048a36bd5515b2a193, type: 3}
+  m_TextComponent: {fileID: 1746425023}
+  i_CycleView: {fileID: 1801569928}
+  repeatCycle: 1
   cityController: {fileID: 927390043}
 --- !u!114 &2064251350
 MonoBehaviour:
