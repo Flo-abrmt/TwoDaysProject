@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class CityController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+ 
+    private Warehouse warehouse;
+
+    void whenInitialized()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    void whenCycle()
     {
-        
+
     }
+
+    void checkForRessources()
+    {
+
+    }
+
+    void buildBuildings()
+    {
+
+    }
+    //function get called all cycles
+
+    //function to get the ressources and safe them into an array
+
+    //function to let the city make things if ressources are high enogh
+
+
 }
