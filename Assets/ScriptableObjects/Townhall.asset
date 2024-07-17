@@ -12,14 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3eec6a8e1a99f4bb3c316cd45f7cea, type: 3}
   m_Name: Townhall
   m_EditorClassIdentifier: 
-  description: 
-  costWorkForce: 
-  costFood: 
-  costGold: 
-  buildName: 
-  produceWorkForce: 
-  produceFood: 
-  produceGold: 
+  description: Base of Operation and politics
+  buildCostsWorkForce: 100
+  buildCostsFood: 120
+  buildCostsGold: 500
+  buildName: Townhall
+  importance: 0
+  produceAmountWorkForce: 0
+  produceAmountFood: 0
+  produceAmountGold: 0
+  buildtime: 0
+  producetime: 12
   additionalInformations: []
-  UISprite: {fileID: 0}
-  GameSprite: {fileID: 0}
+  UISprite: {fileID: 21300000, guid: 5f68c35814b278c47b399f0e4c83ae5e, type: 3}
+  GameSprite: {fileID: 21300000, guid: 7c9fcec2ea94990469a2910e8b09e896, type: 3}

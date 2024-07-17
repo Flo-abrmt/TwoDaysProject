@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Farm
   m_EditorClassIdentifier: 
   description: Building that produces Food
-  costWorkForce: 5
-  costFood: 
-  costGold: 20
+  buildCostsWorkForce: 10
+  buildCostsFood: 0
+  buildCostsGold: 20
   buildName: Farm
-  produceWorkForce: 
-  produceFood: 15
-  produceGold: 
+  importance: 1
+  produceAmountWorkForce: 0
+  produceAmountFood: 5
+  produceAmountGold: 0
+  buildtime: 864
+  producetime: 12
   additionalInformations:
   - Stinks like a baka
   UISprite: {fileID: 21300000, guid: 35ec991e8f250bd4b89fdd8a2e58a0bf, type: 3}

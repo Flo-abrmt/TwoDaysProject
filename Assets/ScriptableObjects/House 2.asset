@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf3eec6a8e1a99f4bb3c316cd45f7cea, type: 3}
-  m_Name: House
+  m_Name: House 2
   m_EditorClassIdentifier: 
-  description: A place where the Workforce resides
-  buildCostsWorkForce: 5
-  buildCostsFood: 10
-  buildCostsGold: 20
+  description: upgrade t2 of house
+  buildCostsWorkForce: 15
+  buildCostsFood: 20
+  buildCostsGold: 50
   buildName: House
   importance: 0
   produceAmountWorkForce: 1
   produceAmountFood: 0
-  produceAmountGold: 2
-  buildtime: 864
+  produceAmountGold: 9
+  buildtime: 1864
   producetime: 12
   additionalInformations:
   - Nils Stinkt nach Vegan Nuggets
