@@ -10,6 +10,7 @@ public class Warehouse : ScriptableObject
     [SerializeField] int food;
     [SerializeField] int gold;
     [SerializeField] int workforce;
+    [SerializeField] int morale;
 
     [SerializeField] int farmNumber;
     [SerializeField] int houseNumber;
@@ -21,5 +22,7 @@ public class Warehouse : ScriptableObject
     public int FarmNumber { get => farmNumber; set => farmNumber = value; }
     public int HouseNumber { get => houseNumber; set => houseNumber = value; }
     public int CapitalBuildingNumber { get => capitalBuildingNumber; set => capitalBuildingNumber = value; }
+
+    public int Morale { get => morale; set => morale = value; }
 
 }

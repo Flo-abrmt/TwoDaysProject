@@ -7,12 +7,12 @@ using UnityEngine;
 public class Building : ScriptableObject {
 
     [SerializeField] string description;
-    [SerializeField] string costWorkForce;
-    [SerializeField] int? costsWorkForce;
-    [SerializeField] string costFood;
-    [SerializeField] int? costsFood;
-    [SerializeField] string costGold;
-    [SerializeField] int? costsGold;
+    [SerializeField] string buildCostWorkForce;
+    [SerializeField] int? buildCostsWorkForce;
+    [SerializeField] string buildCostFood;
+    [SerializeField] int? buildCostsFood;
+    [SerializeField] string buildCostGold;
+    [SerializeField] int? buildCostsGold;
     [SerializeField] string buildName;
     [SerializeField] int? importance;
     [SerializeField] string produceWorkForce;
@@ -21,11 +21,20 @@ public class Building : ScriptableObject {
     [SerializeField] int? produceAmountFood;
     [SerializeField] string produceGold;
     [SerializeField] int? produceAmountGold;
+    [SerializeField] int? buildtime;
 
     [SerializeField] List<string> additionalInformations;
 
     [SerializeField] Sprite UISprite;
     [SerializeField] Sprite GameSprite;
+
+
+
+
+    private void Awake()
+    {
+        
+    }
 }
 
 

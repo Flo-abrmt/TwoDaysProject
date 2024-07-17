@@ -20,6 +20,7 @@ MonoBehaviour:
   produceWorkForce: 10
   produceFood: 
   produceGold: 5
-  additionalInformations: []
+  additionalInformations:
+  - Nils Stinkt nach Vegan Nuggets
   UISprite: {fileID: 0}
   GameSprite: {fileID: 0}
