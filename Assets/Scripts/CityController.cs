@@ -5,7 +5,7 @@ using UnityEngine;
 public class CityController : MonoBehaviour
 {
  
-    private Warehouse warehouse;
+    [SerializeField] Warehouse cityWarehouse;
 
     void whenInitialized()
     {
@@ -15,6 +15,7 @@ public class CityController : MonoBehaviour
     public void whenCycle()
     {
         Debug.Log("123");
+        Debug.Log(cityWarehouse.Food);
     }
 
     void checkForRessources()

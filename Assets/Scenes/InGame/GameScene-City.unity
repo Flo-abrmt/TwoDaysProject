@@ -1446,6 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f80fc12af72ff474caaf327b0c72952a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cityWarehouse: {fileID: 11400000, guid: de36b0ab4a9c9eb4cbe915423c8089bb, type: 2}
 --- !u!4 &927390044
 Transform:
   m_ObjectHideFlags: 0
@@ -37117,7 +37118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70a96d362121c244fa3aa866a3b9275d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warehouse: {fileID: 0}
+  warehouse: {fileID: 11400000, guid: de36b0ab4a9c9eb4cbe915423c8089bb, type: 2}
   moraleText: {fileID: 346024411}
   workforceText: {fileID: 68923798}
   goldText: {fileID: 878441805}
