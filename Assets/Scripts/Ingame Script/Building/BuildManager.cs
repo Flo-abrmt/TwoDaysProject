@@ -8,6 +8,8 @@ public class BuildManager : MonoBehaviour
     public List<Building> buildings = new List<Building>();
     [SerializeField]
     public Warehouse warehouse;
+    public List<Building> availableBuildings;
+    private Building buildingToPlace;
 
     void Start()
     {
@@ -15,6 +17,17 @@ public class BuildManager : MonoBehaviour
         LoadBuildings();
         StartProducingResources();
     }
+
+    // Example method to set the building to place
+    public void SetBuildingToPlace(Building building)
+    {
+        buildingToPlace = building;
+    }
+    public Building GetBuildingToPlace()
+    {
+        return buildingToPlace;
+    }
+
 
     private void LoadBuildings()
     {
@@ -48,10 +61,21 @@ public class BuildManager : MonoBehaviour
         }
     }
 
+
     // should be called from builder script
     public void AddBuilding(Building building)
     {
         buildings.Add(building);
         building.StartProducing(this, warehouse);
     }
+
+    public void PlaceBuilding(Building building)
+    {
+
+        buildings.Add(building);
+        building.StartProducing(this, warehouse);
+
+        //availableBuildings.Add(building);
+    }
 }
+

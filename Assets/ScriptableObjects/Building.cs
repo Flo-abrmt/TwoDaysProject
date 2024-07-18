@@ -19,8 +19,8 @@ public class Building : ScriptableObject
 
     [SerializeField] private List<string> additionalInformations;
 
-    [SerializeField] private Sprite UISprite;
-    [SerializeField] private Sprite GameSprite;
+    [SerializeField] public Sprite UISprite;
+    [SerializeField] public Sprite GameSprite;
 
     public string BuildName => buildName;
     public int ProduceAmountFood { get => produceAmountFood; set => produceAmountFood = value; }

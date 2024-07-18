@@ -1473,9 +1473,10 @@ GameObject:
   - component: {fileID: 962144535}
   - component: {fileID: 962144537}
   - component: {fileID: 962144536}
+  - component: {fileID: 962144538}
   m_Layer: 0
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1554,6 +1555,22 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &962144538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962144534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbd584323bfe04447af75120d76c6752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panSpeed: 20
+  panBorderThickness: 10
+  zoomSpeed: 5
+  panLimit: {x: 100, y: 100}
 --- !u!1 &965038325
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,6 +2041,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331679357}
   m_CullTransparentMesh: 1
+--- !u!1 &1334641307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1334641308}
+  - component: {fileID: 1334641310}
+  - component: {fileID: 1334641309}
+  m_Layer: 0
+  m_Name: BuildManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1334641308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334641307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 543.8111, y: 276.20477, z: 2.7315664}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1334641309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334641307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435e2a445ff1f714fb8ba6c296176eef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1583124741}
+  buildingPrefab: {fileID: 940651050253690481, guid: 118a96e403f9ca6438a4ec44bad6c7da, type: 3}
+  buildManager: {fileID: 1334641310}
+--- !u!114 &1334641310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334641307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe5fab07c28186489b5bb586648b602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildings: []
+  warehouse: {fileID: 11400000, guid: de36b0ab4a9c9eb4cbe915423c8089bb, type: 2}
+  availableBuildings:
+  - {fileID: 11400000, guid: df6ebdeaa02cd9b4b9d962ece2aace3d, type: 2}
 --- !u!1 &1441593848
 GameObject:
   m_ObjectHideFlags: 0
@@ -36721,7 +36802,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1815718565}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1334641309}
+        m_TargetAssemblyTypeName: Builder, Assembly-CSharp
+        m_MethodName: SelectBuilding
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: df6ebdeaa02cd9b4b9d962ece2aace3d, type: 2}
+          m_ObjectArgumentAssemblyTypeName: Building, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1815718565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37050,7 +37143,6 @@ GameObject:
   - component: {fileID: 2064251350}
   - component: {fileID: 2064251349}
   - component: {fileID: 2064251352}
-  - component: {fileID: 2064251353}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -37123,20 +37215,6 @@ MonoBehaviour:
   workforceText: {fileID: 68923798}
   goldText: {fileID: 878441805}
   foodText: {fileID: 57256931}
---- !u!114 &2064251353
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064251348}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fe5fab07c28186489b5bb586648b602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildings: []
-  warehouse: {fileID: 11400000, guid: de36b0ab4a9c9eb4cbe915423c8089bb, type: 2}
 --- !u!1 &2117156004
 GameObject:
   m_ObjectHideFlags: 0
@@ -37357,3 +37435,4 @@ SceneRoots:
   - {fileID: 927390044}
   - {fileID: 676695426}
   - {fileID: 1882325628}
+  - {fileID: 1334641308}
