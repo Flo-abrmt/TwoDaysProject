@@ -5,7 +5,7 @@ using TMPro;
 
 public class Ressources : MonoBehaviour
 {
-    private Warehouse warehouse;
+    public Warehouse warehouse;
 
     // UI elements
     public TMP_Text moraleText;
@@ -15,7 +15,6 @@ public class Ressources : MonoBehaviour
 
     void Start()
     {
-        warehouse = FindObjectOfType<Warehouse>();
 
         if (warehouse == null)
         {
@@ -28,10 +27,12 @@ public class Ressources : MonoBehaviour
 
         // Initialize the UI with the starting values
         UpdateResourceUI();
+
     }
 
     void UpdateResourceUI()
     {
+        Debug.Log("Update UI values in Resource.cs");
         moraleText.text = $"{warehouse.Morale} / 100";
         workforceText.text = warehouse.Workforce.ToString();
         goldText.text = warehouse.Gold.ToString();

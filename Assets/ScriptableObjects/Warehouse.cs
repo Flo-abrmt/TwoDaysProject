@@ -20,6 +20,7 @@ public class Warehouse : ScriptableObject
         {
             food = value;
             onResourcesUpdated?.Invoke();
+            Debug.Log("Updated Resource in Warehouse");
         }
     }
 
@@ -30,6 +31,7 @@ public class Warehouse : ScriptableObject
         {
             gold = value;
             onResourcesUpdated?.Invoke();
+            Debug.Log("Updated Resource in Warehouse");
         }
     }
 
@@ -40,6 +42,7 @@ public class Warehouse : ScriptableObject
         {
             workforce = value;
             onResourcesUpdated?.Invoke();
+            Debug.Log("Updated Resource in Warehouse");
         }
     }
 
@@ -50,6 +53,7 @@ public class Warehouse : ScriptableObject
         {
             morale = value;
             onResourcesUpdated?.Invoke();
+            Debug.Log("Updated Resource in Warehouse");
         }
     }
 }
